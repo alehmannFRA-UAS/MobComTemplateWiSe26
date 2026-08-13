@@ -12,12 +12,12 @@ The following steps will help you apply what is provided here.
 
 #### Install Ubuntu 24.04 LTS  
 
-Download and install [Ubuntu 24.04 Desktop](https://ubuntu.com/download/desktop)   
+Download and install [Ubuntu 24.04 Desktop](https://ubuntu.com/download/alternative-downloads)   
 E.g., you can use a VM under Windows with the following tools, for example: VirtualBox, VMware Workstation or Hyper-V (built-in for Pro/Enterprise).
 > [!CAUTION]
 > WSL has known issues with SCTP, which is relevant to the project!
 
-After installation update and upgrade packages:
+After installation, update and upgrade packages:
 ```bash
 sudo apt update 
 sudo apt upgrade
@@ -106,9 +106,9 @@ modinfo gtp5g
 sudo snap install --classic code 
 ```
 
-Open Visual Studio Code and clone your GitHub project repository see [Tutorial](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_clone-a-repository-locally)
+Open Visual Studio Code and clone your GitHub project repository; see [Tutorial](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_clone-a-repository-locally)
 
-Next install the following extension packages in Visual Studio Code  
+Next, install the following extension packages in Visual Studio Code  
 ![Extension Packages](docs/images/vsc.png) 
 
 #### Configure host IP
@@ -120,7 +120,7 @@ Instead of the IP address 10.0.2.15, enter the local IP address of your computer
 
 ## Starting the first application
 
-Enter the following comand inside the Visual Studio Code Terminal  
+Enter the following command inside the Visual Studio Code Terminal  
 ```bash
 docker compose -f compose-files/basic/packetrusher/docker-compose.yaml --env-file=build-files/open5gs.env up -d
 ```
@@ -131,12 +131,12 @@ You can do this via the WebUI, for example.
 
 #### Register Subscriber Information
 
-Connect to http://localhost:9999 and login with admin account.  
-Username : admin  
-Password : 1423  
+Connect to http://localhost:9999 and login with the admin account.  
+Username: admin  
+Password: 1423  
 
 
-Tip: You can change the password in Account Menu.
+Tip: You can change the password in the Account Menu.
 
 
 To add subscriber information, you can do WebUI operations in the following order:  
@@ -149,19 +149,19 @@ To add subscriber information, you can do WebUI operations in the following orde
 The corresponding UE credentials can be found in the UE configuration file, e.g., in the currently used docker compose scenario under
 [/configs/basic/packetrusher/packetrusher.yaml](/configs/basic/packetrusher/packetrusher.yaml)  
 
-You also may add a user with slice to db via shell/Terminal  
+You may also add a user with slice to db via shell/Terminal  
 ```bash
 ./open5gs-dbctl add_ue_with_slice 001011234567891 00000000000000000000000000000000 00000000000000000000000000000000 internet 01 1
 ```
 
 For more information on using the script, see the [open5gs-dbctl](open5gs-dbctl) script itself.  
 
-Next stop the docker compose example with the following command.
+Next, stop the Docker Compose example with the following command.
 ```bash
 docker compose -f compose-files/basic/packetrusher/docker-compose.yaml --env-file=build-files/open5gs.env down
 ```
 
-After adding a subscriber to the database the subscriber data will be persistently stored. It will not be removed when a docker container stops.  
+After adding a subscriber to the database, the subscriber data will be persistently stored. It will not be removed when a Docker container stops.  
 
 #### Start Wireshark
 Start Wireshark and choose Interface __any__ for capturing packets.  
@@ -172,7 +172,7 @@ Now start scenario UERANSIM.
 ```bash
 docker compose -f compose-files/basic/ueransim/docker-compose.yaml --env-file=build-files/open5gs.env up -d
 ```
-You should now be able to see and analyze all messages in Wireshark.  
+You should now be able to see and analyse all messages in Wireshark.  
 How to use UERANSIM, you can read the file [Ueransim.md](/docs/ueransim.md).  
 Try a ping request with UERANSIM, for example.  
 You should be able to see the ping messages in Wireshark, for example by setting the filter to ```gtp```.  

@@ -12,7 +12,7 @@ The following steps will help you apply what is provided here.
 
 #### Install Ubuntu 24.04 LTS  
 
-Download and install [Ubuntu 24.04 Desktop](https://ubuntu.com/download/alternative-downloads)   
+Download and install [Ubuntu 24.04 Desktop](https://releases.ubuntu.com/24.04/)   
 E.g., you can use a VM under Windows with the following tools, for example: VirtualBox, VMware Workstation or Hyper-V (built-in for Pro/Enterprise).
 > [!CAUTION]
 > WSL has known issues with SCTP, which is relevant to the project!

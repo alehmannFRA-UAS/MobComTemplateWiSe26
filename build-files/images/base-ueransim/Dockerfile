@@ -10,7 +10,7 @@ FROM ubuntu:${UBUNTU_VERSION} AS builder
 LABEL organization="FgfTk@fb2.fra-uas.de"
 
 # build-time arguments for builder
-ARG UERANSIM_VERSION="v3.2.7"
+ARG UERANSIM_VERSION="v3.3.0"
 ARG DEBIAN_FRONTEND="noninteractive"
 
 # install dependencies

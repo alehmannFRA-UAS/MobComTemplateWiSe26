@@ -113,3 +113,18 @@ clean: clean-open5gs clean-ueransim clean-mongodb clean-packetrusher
 
 docker-prune-system:
 	docker system prune -f
+
+docker-prune-volumes:
+	docker volume prune -f
+
+docker-prune-images:
+	docker image prune -f
+
+docker-remove-all-containers:
+	docker rm -f $$(docker ps -a -q)
+
+docker-remove-all-images:
+	docker rmi -f $$(docker images -q)
+
+docker-remove-all-volumes:
+	docker volume rm $$(docker volume ls -q)

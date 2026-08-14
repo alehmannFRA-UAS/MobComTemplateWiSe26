@@ -8,7 +8,7 @@ FROM node:${NODE_VERSION}-bookworm AS builder
 LABEL organization="FgfTk@fb2.fra-uas.de"
 
 # build-time arguments for builder
-ARG OPEN5GS_VERSION="v2.7.6"
+ARG OPEN5GS_VERSION="v2.8.0"
 ARG DEBIAN_FRONTEND="noninteractive"
 
 # install dependencies

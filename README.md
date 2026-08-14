@@ -1,4 +1,4 @@
-# Mobile Computing Template Wintersemester 2025/26
+# Mobile Computing Template Wintersemester 2026/27
 
 The following steps will help you apply what is provided here.
 
@@ -10,9 +10,9 @@ The following steps will help you apply what is provided here.
 > - Memory: 8 GB RAM
 > - Disk space: 50 GB
 
-#### Install Ubuntu 24.04 LTS  
+#### Install Ubuntu 26.04 LTS  
 
-Download and install [Ubuntu 24.04 Desktop](https://releases.ubuntu.com/24.04/)   
+Download and install [Ubuntu 26.04 Desktop](https://ubuntu.com/download/desktop)   
 E.g., you can use a VM under Windows with the following tools, for example: VirtualBox, VMware Workstation or Hyper-V (built-in for Pro/Enterprise).
 > [!CAUTION]
 > WSL has known issues with SCTP, which is relevant to the project!
@@ -25,7 +25,7 @@ sudo apt upgrade
 
 #### Install further needed packages:
 ```bash
-sudo apt install bzip2 git make gcc
+sudo apt install dkms git
 ```
 
 #### Install MongoDB
@@ -90,7 +90,7 @@ Next reboot your machine or computer!
 #### Install 5G GTP-U Kernel Module for Packetrusher
 
 ```bash
-git clone -b v0.9.14 https://github.com/free5gc/gtp5g.git
+git clone https://github.com/free5gc/gtp5g.git
 cd gtp5g
 make
 sudo make install
@@ -153,6 +153,12 @@ You may also add a user with slice to db via shell/Terminal
 ```bash
 ./open5gs-dbctl add_ue_with_slice 001011234567891 00000000000000000000000000000000 00000000000000000000000000000000 internet 01 1
 ```
+
+> [!TIP]
+> You may need to make the file executable first.
+> ```bash
+> chmod +x open5gs-dbctl
+> ```
 
 For more information on using the script, see the [open5gs-dbctl](open5gs-dbctl) script itself.  
 

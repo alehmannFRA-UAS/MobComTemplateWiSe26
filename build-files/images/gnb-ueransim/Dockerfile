@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # global build-time arguments for FROM statements
-ARG UERANSIM_VERSION="v3.2.7"
+ARG UERANSIM_VERSION="v3.3.0"
 ARG UBUNTU_VERSION="jammy"
 
 FROM fgftk/base-ueransim:${UERANSIM_VERSION} AS builder

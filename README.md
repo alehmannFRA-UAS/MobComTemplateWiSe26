@@ -1,5 +1,7 @@
 # Mobile Computing Template Wintersemester 2026/27
 
+You can find more information about the project in the [Handbook](Handbook.md) document
+
 The following steps will help you apply what is provided here.
 
 ## Installation
